@@ -1,0 +1,416 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Microsoft Yahei", sans-serif;
+    background-color: #f6f4ef;
+    color: #2b2b3a;
+}
+
+
+/* ① 顶栏 */
+#top {
+    background-color: #2c375b;
+    padding: 10px 24px;
+}
+
+
+.top-logo {
+    color: #f3d9a4;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.top-boton li {
+    margin-left: 18px;
+}
+
+
+.top-boton a {
+    color: #cfd6ea;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+.top-boton a:hover {
+    color: #fff;
+}
+
+
+/* ② 导航 */
+#nav {
+    background-color: #2c375b;
+}
+
+
+.navbar-brand, .nav-link {
+    color: #f3d9a4 !important;
+}
+
+
+.nav-link:hover {
+    color: #ffffff !important;
+}
+
+
+/* ③ 滑动公告 */
+.scroll {
+    overflow: hidden;
+    background-color: #30417c;
+    color: #f3d9a4;
+    white-space: nowrap;
+    line-height: 1.6;
+}
+
+
+.scroll-inner {
+    display: inline-flex;
+    animation: scrollMove 15s linear infinite;
+}
+
+
+.scroll-inner span {
+    padding: 10px 60px;
+}
+
+
+.scroll:hover .scroll-inner {
+    animation-play-state: paused;
+}
+
+
+@keyframes scrollMove {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+
+/* 通用标题 */
+.section-title {
+    letter-spacing: 2px;
+    color: #1b2440;
+}
+
+
+/* ④ Banner */
+.banner-cover img,
+.mini-book img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+
+.banner-cover img {
+    height: 380px;
+}
+
+
+.mini-book {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+
+.mini-book:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(27, 36, 64, 0.22);
+}
+
+
+.mini-book img {
+    height: 170px;
+}
+
+
+.pub-top {
+    font-size: 14px;
+    color: #5a6380;
+    padding: 12px 14px 6px;
+}
+
+
+.btn-gold {
+    background-color: #f3d9a4;
+    color: #1b2440;
+    border: none;
+}
+
+
+.btn-gold:hover {
+    background-color: #e8c57e;
+    color: #1b2440;
+}
+
+
+/* ⑤ 角色卡片 */
+.role-card {
+    background: #bfcfe1;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+
+.role-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 22px rgba(27, 36, 64, 0.25);
+}
+
+
+.role-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+
+.role-card p {
+    padding: 12px 14px;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+.tag-new {
+    display: inline-block;
+    background: #c24c57;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-right: 6px;
+}
+
+
+/* ⑥ 章节轮播 */
+.bg-night {
+    background: linear-gradient(135deg, #1b2440, #2f3d63);
+}
+
+
+.carousel-item img {
+    height: 360px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+.carousel-caption {
+    background: rgba(27, 36, 64, 0.55);
+    border-radius: 10px;
+    padding: 18px 24px;
+}
+
+
+/* ⑦ 新闻 Tab */
+.nav-tabs .nav-link {
+    color: #5171d3;
+    border: none;
+}
+
+
+.nav-tabs .nav-link.active {
+    color: #c24c57;
+    border-bottom: 2px solid #c24c57;
+}
+
+
+.news-list li {
+    padding: 12px 0;
+    border-bottom: 1px dashed #5eb887;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+.list-time {
+    display: inline-block;
+    color: #999;
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+
+.news-card {
+    background: #d6d0d0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+
+.news-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+
+.news-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+
+.news-card p {
+    padding: 10px 12px;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+.quote-callout {
+    background: #fff;
+    border-left: 4px solid #c5af82;
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ⑧ 语录卡片 */
+.quote-card {
+    background: #ece2ef;
+    border-left: 4px solid #f3d9a4;
+    border-radius: 10px;
+    padding: 22px;
+    height: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+.quote-card p {
+    font-style: italic;
+    line-height: 1.8;
+    margin: 0;
+}
+
+
+/* ⑨ 商城卡片 */
+.goods-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 14px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+
+.goods-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+
+.goods-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.goods-card h6 {
+    margin: 12px 0 4px;
+}
+
+
+.goods-card .price {
+    color: #c24c57;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* ========= 新增：章节卡片 chapter-item ========= */
+.chapter-item {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 16px 18px;
+    height: 100%;
+    transition: 0.3s ease;
+    box-shadow: 0 2px 8px rgba(27, 36, 64, 0.08);
+}
+
+.chapter-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(27, 36, 64, 0.20);
+}
+
+.chapter-item h6 {
+    color: #1b2440;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.chapter-item p {
+    font-size: 14px;
+    line-height: 1.65;
+    color: #444;
+    margin: 0;
+}
+
+/* 悬浮迷你播放器：固定底部，随页面滑动一直显示 */
+.mini-player {
+    position: fixed;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-250%);
+    background: #1b2440;
+    color: #f3d9a4;
+    border-radius: 40px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    max-width: 92%;
+}
+
+.mini-player img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.mp-title {
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+}
+
+.mp-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: none;
+    background: #f3d9a4;
+    color: #1b2440;
+    font-size: 14px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.mp-btn:hover { background: #e8c57e; }
+
+/* 手机端歌名收窄 */
+@media (max-width: 576px) {
+    .mp-title { max-width: 110px; }
+}

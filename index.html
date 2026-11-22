@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小王子 · Le Petit Prince</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/media.css">
+    
+</head>
+<body>
+    <!-- 悬浮迷你播放器：随页面滚动固定在底部，只控制播放/暂停 -->
+    <div class="mini-player" id="miniPlayer">
+        <img src="images/audio-cover.jpg" alt="封面">
+        <span class="mp-title">Peter Pan Was Right</span>
+        <button class="mp-btn" id="miniPlayBtn" title="播放/暂停">▶</button>
+        <audio id="audioPlayer" src="audio/Anson Seabra - Peter Pan Was Right.mp3" preload="metadata"></audio>
+    </div>
+    <!-- ① 顶栏：Logo + 登录注册 -->
+    <div id="top" class="d-flex justify-content-between align-items-center">
+        <a href="#" class="top-logo">
+            <i class="bi bi-stars"></i> 小王子 Le Petit Prince
+        </a>
+        <ul class="top-boton list-unstyled d-flex mb-0">
+            <li><a href="#">登录</a></li>
+            <li><a href="#">注册</a></li>
+            <li><a href="#"><i class="iconfont icon-gouwuche me-1"></i>购物车</a></li>
+        </ul>
+    </div>
+    
+
+    <!-- ② 导航栏 -->
+    <nav id="nav" class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#story">登场角色</a></li>
+
+
+                    <!-- ========== 章节下拉菜单（带具体标题） ========== -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            小王子章节
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#ch1">第1章 · 画不出的画</a></li>
+                            <li><a class="dropdown-item" href="#ch2">第2章 · 沙漠里遇见小王子</a></li>
+                            <li><a class="dropdown-item" href="#ch3">第3章 · 来自 B612 星球</a></li>
+                            <li><a class="dropdown-item" href="#ch4">第4章 · 大人都不明白</a></li>
+                            <li><a class="dropdown-item" href="#ch5">第5章 · 猴面包树的警告</a></li>
+                            <li><a class="dropdown-item" href="#ch6">第6章 · 一天看了四十四次日落</a></li>
+                            <li><a class="dropdown-item" href="#ch7">第7章 · 他的那朵玫瑰</a></li>
+                            <li><a class="dropdown-item" href="#ch8">第8章 · 浇灌与照料玫瑰</a></li>
+                            <li><a class="dropdown-item" href="#ch9">第9章 · 离开自己的星球</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#ch10">第10章 · 国王的星球</a></li>
+                            <li><a class="dropdown-item" href="#ch11">第11章 · 爱虚荣的人</a></li>
+                            <li><a class="dropdown-item" href="#ch12">第12章 · 醉酒的人</a></li>
+                            <li><a class="dropdown-item" href="#ch13">第13章 · 数星星的商人</a></li>
+                            <li><a class="dropdown-item" href="#ch14">第14章 · 不停点灯的人</a></li>
+                            <li><a class="dropdown-item" href="#ch15">第15章 · 不出门的地理学家</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#ch16">第16章 · 抵达地球</a></li>
+                            <li><a class="dropdown-item" href="#ch17">第17章 · 遇见沙漠里的蛇</a></li>
+                            <li><a class="dropdown-item" href="#ch18">第18章 · 路边的小花</a></li>
+                            <li><a class="dropdown-item" href="#ch19">第19章 · 高山与回声</a></li>
+                            <li><a class="dropdown-item" href="#ch20">第20章 · 玫瑰花园</a></li>
+                            <li><a class="dropdown-item" href="#ch21">第21章 · 狐狸的驯养课</a></li>
+                            <li><a class="dropdown-item" href="#ch22">第22章 · 扳道工与列车</a></li>
+                            <li><a class="dropdown-item" href="#ch23">第23章 · 止渴药丸商人</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#ch24">第24章 · 寻找水井</a></li>
+                            <li><a class="dropdown-item" href="#ch25">第25章 · 月光下的甘泉</a></li>
+                            <li><a class="dropdown-item" href="#ch26">第26章 · 告别与归途</a></li>
+                            <li><a class="dropdown-item" href="#ch27">第27章 · 想念小王子</a></li>
+                        </ul>
+                    </li>
+                    <!-- ========== 下拉菜单结束 ========== -->
+                    <li class="nav-item"><a class="nav-link" href="#rose">玫瑰与狐狸</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#news">资讯动态</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#audio">原声朗读</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#goods">周边商城</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#quote">经典语录</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ③ 滑动公告 -->
+    <div id="notice" class="scroll">
+        <div class="scroll-inner">
+            <span>如果你下午四点钟来，那么从三点钟开始，我就会感到幸福。时间越临近，我就越感到幸福。</span>
+            <span>如果你下午四点钟来，那么从三点钟开始，我就会感到幸福。时间越临近，我就越感到幸福。</span>
+        </div>
+    </div>
+
+
+    <!-- ⑥ 章节轮播 -->
+    <section class="bg-night py-5">
+        <div class="container">
+            <h2 class="section-title text-center text-white mb-4"><i class="bi bi-bookmark-star"></i> 精选章节</h2>
+            <div id="chapterCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#chapterCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#chapterCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#chapterCarousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/chapter1.jpg" class="d-block w-100" alt="遇见飞行员">
+                        <div class="carousel-caption">
+                            <h3>第一章 · 沙漠相遇</h3>
+                            <p>飞行员的飞机在沙漠故障，遇见了要他画一只羊的小王子。</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/chapter2.jpg" class="d-block w-100" alt="玫瑰">
+                        <div class="carousel-caption">
+                            <h3>第二章 · 星球上的玫瑰</h3>
+                            <p>回忆起 B612 星球上那朵让他又爱又烦恼的玫瑰。</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/chapter3.jpg" class="d-block w-100" alt="狐狸">
+                        <div class="carousel-caption">
+                            <h3>第三章 · 狐狸的驯养课</h3>
+                            <p>在金色的麦田边，狐狸讲起了独一无二与羁绊。</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#chapterCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#chapterCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ④ 主打 Banner：左封面 + 右小刊 -->
+    <section id="home" class="banner container py-5">
+        <div class="row g-4">
+            <div class="col-lg-5">
+                <div class="banner-left">
+                    <div class="pub-top">免费阅读</div>
+                    <a href="#" class="banner-cover">
+                        <img src="images/main-book.jpg" alt="小王子原著封面">
+                    </a>
+                    <div class="banner-button mt-3">
+                        <a href="#" class="btn btn-gold me-2"><i class="bi bi-book"></i> 阅读电子版</a>
+                        <a href="#" class="btn btn-outline-light"><i class="bi bi-bell"></i> 订阅</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="mini-book">
+                            <div class="pub-top">B612 星球集</div>
+                            <a href="#"><img src="images/mini-planet.jpg" alt="星球集"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mini-book">
+                            <div class="pub-top">玫瑰特辑</div>
+                            <a href="#"><img src="images/mini-rose.jpg" alt="玫瑰特辑"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mini-book">
+                            <div class="pub-top">狐狸篇</div>
+                            <a href="#"><img src="images/mini-fox.jpg" alt="狐狸篇"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mini-book">
+                            <div class="pub-top">星空画册</div>
+                            <a href="#"><img src="images/mini-star.jpg" alt="星空画册"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ⑤ 角色连载卡片（横向网格） -->
+    <section id="story" class="container py-5">
+        <h2 class="section-title mb-4"><i class="bi bi-globe2"></i> 登场角色</h2>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="role-card">
+                    <a href="#"><img src="images/role-prince.jpg" alt="小王子"></a>
+                    <p><br>来自 B612 星球的少年，正四处旅行。</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="role-card">
+                    <a href="#"><img src="images/role-rose.jpg" alt="玫瑰"></a>
+                    <p><br>一朵骄傲又脆弱的玫瑰，等待被理解。</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="role-card">
+                    <a href="#"><img src="images/role-fox.jpg" alt="狐狸"></a>
+                    <p><br>教会小王子"驯养"与陪伴的狐狸。</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="role-card">
+                    <a href="#"><img src="images/role-pilot.jpg" alt="飞行员"></a>
+                    <p><br>沙漠中遇见小王子的飞行员。</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="role-card">
+                    <a href="#"><img src="images/role-king.jpg" alt="国王"></a>
+                    <p><br>住在小行星上、热爱统治的国王。</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="role-card">
+                    <a href="#"><img src="images/role-lamplighter.jpg" alt="点灯人"></a>
+                    <p><br>不停点灯熄灯、恪尽职守的点灯人。</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="role-card">
+                    <a href="#"><img src="images/role-weather.jpg" alt="地理学家"></a>
+                    <p><br>记录山川河流、却不亲自旅行的地理学家。</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="role-card">
+                    <a href="#"><img src="images/role-snake.jpg" alt="蛇"></a>
+                    <p><br>沙漠中若有所思、神秘的蛇。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 章节目录（下拉菜单锚点对应） -->
+    <section id="chapters" class="container py-5">
+        <h2 class="section-title mb-4"><i class="bi bi-list-ul"></i> 全部章节</h2>
+        <div class="row g-3">
+            <div class="col-md-6 col-lg-4" id="ch1"><div class="chapter-item"><h6>第1章 · 画不出的画</h6><p>飞行员小时候画了一条吞掉大象的蟒蛇，大人却说那是一顶帽子。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch2"><div class="chapter-item"><h6>第2章 · 沙漠里遇见小王子</h6><p>飞机在沙漠故障，小王子请他画一只羊。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch3"><div class="chapter-item"><h6>第3章 · 来自 B612 星球</h6><p>小王子说自己来自一颗很小的小行星。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch4"><div class="chapter-item"><h6>第4章 · 大人都不明白</h6><p>大人们总是需要别人把事情解释清楚。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch5"><div class="chapter-item"><h6>第5章 · 猴面包树的警告</h6><p>要及时拔掉坏树苗，否则它会撑破星球。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch6"><div class="chapter-item"><h6>第6章 · 一天看了四十四次日落</h6><p>小王子忧伤的时候，喜欢看日落。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch7"><div class="chapter-item"><h6>第7章 · 他的那朵玫瑰</h6><p>小王子谈起星球上那朵骄傲的花。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch8"><div class="chapter-item"><h6>第8章 · 浇灌与照料玫瑰</h6><p>他为玫瑰浇水、挡风，也为她烦恼。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch9"><div class="chapter-item"><h6>第9章 · 离开自己的星球</h6><p>小王子告别玫瑰，踏上旅行。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch10"><div class="chapter-item"><h6>第10章 · 国王的星球</h6><p>一位总想统治一切的国王。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch11"><div class="chapter-item"><h6>第11章 · 爱虚荣的人</h6><p>他只听得见赞美，不停要别人鼓掌。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch12"><div class="chapter-item"><h6>第12章 · 醉酒的人</h6><p>酒鬼喝酒是为了忘记羞愧。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch13"><div class="chapter-item"><h6>第13章 · 数星星的商人</h6><p>商人以为自己拥有所有星星。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch14"><div class="chapter-item"><h6>第14章 · 不停点灯的人</h6><p>点灯人忠于职守，不停点灯熄灯。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch15"><div class="chapter-item"><h6>第15章 · 不出门的地理学家</h6><p>他记录书本，却从不亲自旅行。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch16"><div class="chapter-item"><h6>第16章 · 抵达地球</h6><p>小王子来到了人类居住的地球。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch17"><div class="chapter-item"><h6>第17章 · 遇见沙漠里的蛇</h6><p>沙漠中，他遇到一条神秘的蛇。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch18"><div class="chapter-item"><h6>第18章 · 路边的小花</h6><p>他在路边遇见一朵只有三瓣花的小花。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch19"><div class="chapter-item"><h6>第19章 · 高山与回声</h6><p>登上高山，他听见山谷的回声。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch20"><div class="chapter-item"><h6>第20章 · 玫瑰花园</h6><p>他走进一座开满五千朵玫瑰的花园。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch21"><div class="chapter-item"><h6>第21章 · 狐狸的驯养课</h6><p>狐狸教他什么是驯养、陪伴与独一无二。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch22"><div class="chapter-item"><h6>第22章 · 扳道工与列车</h6><p>扳道工分拣来来往往的旅客列车。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch23"><div class="chapter-item"><h6>第23章 · 止渴药丸商人</h6><p>商人卖能省下喝水时间的药丸。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch24"><div class="chapter-item"><h6>第24章 · 寻找水井</h6><p>两人在沙漠里一起寻找一口井。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch25"><div class="chapter-item"><h6>第25章 · 月光下的甘泉</h6><p>井水在星光下格外甘甜。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch26"><div class="chapter-item"><h6>第26章 · 告别与归途</h6><p>小王子准备回到自己的星球。</p></div></div>
+            <div class="col-md-6 col-lg-4" id="ch27"><div class="chapter-item"><h6>第27章 · 想念小王子</h6><p>飞行员望着星空，常常想起小王子。</p></div></div>
+        </div>
+    </section>
+
+
+    <!-- ⑦ 新闻 Tab + 推荐情报 -->
+    <section id="news" class="container py-5">
+        <div class="row g-4">
+            <div class="col-lg-7">
+                <h2 class="section-title mb-3"><i class="bi bi-megaphone"></i> 小王子资讯</h2>
+                <ul class="nav nav-tabs" id="newsTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-new" type="button">最新动态</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-update" type="button">出版信息</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-edit" type="button">编辑部通知</button>
+                    </li>
+                </ul>
+                <div class="tab-content news-list">
+                    <div class="tab-pane fade show active" id="tab-new">
+                        <ul class="list-unstyled">
+                            <li><span class="list-time">2026/11/18</span> 主题展「星空下的小王子」线下巡展正式开幕。</li>
+                            <li><span class="list-time">2026/11/15</span> 原著全新插画译本上线电子版，开放限时试读。</li>
+                            <li><span class="list-time">2026/11/10</span> 狐狸与玫瑰角色徽章周边正式发售。</li>
+                            <li><span class="list-time">2026/11/02</span> 舞台剧《小王子》全国巡演场次公布。</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="tab-update">
+                        <ul class="list-unstyled">
+                            <li><span class="list-time">2026/11/18</span> 《B612 星球集》特辑本周上架。</li>
+                            <li><span class="list-time">2026/11/12</span> 星空画册增补 12 张手绘插图。</li>
+                            <li><span class="list-time">2026/11/06</span> 角色合集第三卷预定下月发售。</li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="tab-edit">
+                        <ul class="list-unstyled">
+                            <li><span class="list-time">2026/11/18</span> 本期部分插图署名信息已更正。</li>
+                            <li><span class="list-time">2026/11/08</span> 读者留言征集活动延长至月底。</li>
+                            <li><span class="list-time">2026/10/30</span> 电子版阅读页面显示问题已修复。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <h2 class="section-title mb-3"><i class="bi bi-star"></i> 推荐情报</h2>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <div class="news-card">
+                            <a href="#"><img src="images/rec-exhibition.jpg" alt="主题展"></a>
+                            <p>「星空下的小王子」主题展，近期在多地美术馆开展。</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="news-card">
+                            <a href="#"><img src="images/rec-book.jpg" alt="原著译本"></a>
+                            <p>名家译本对照版，收录作者生平与创作背景。</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="news-card">
+                            <a href="#"><img src="images/rec-goods.jpg" alt="周边"></a>
+                            <p>玫瑰徽章、星球明信片等周边持续上新。</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="news-card">
+                            <a href="#"><img src="images/rec-stage.jpg" alt="舞台剧"></a>
+                            <p>舞台剧《小王子》全国巡演，欢迎预约观演。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="quote-callout mt-3">
+                    <i class="bi bi-chat-heart"></i> 经典语录征集：写下你最喜欢的一句话，入选将刊登在下一期特辑。
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ⑧ 经典语录 -->
+    <section id="quote" class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-4"><i class="bi bi-chat-quote"></i> 经典语录</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="quote-card">
+                        <p>"只有用心，才能看清事物的本质；真正重要的东西，用眼睛是看不见的。"</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="quote-card">
+                        <p>"正是你为你的玫瑰花费的时间，才使你的玫瑰变得如此重要。"</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="quote-card">
+                        <p>"所有的大人都曾经是小孩，虽然，只有少数人记得。"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- ⑨ 周边商城入口 -->
+    <section id="goods" class="container py-5">
+        <h2 class="section-title text-center mb-4"><i class="bi bi-bag-heart"></i> 周边商城</h2>
+        <div class="row g-4">
+            <div class="col-md-3 col-6">
+                <div class="goods-card">
+                    <img src="images/goods-rose.jpg" alt="玫瑰徽章">
+                    <h6>玫瑰金属徽章</h6>
+                    <p class="price">¥ 399</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="goods-card">
+                    <img src="images/goods-card.jpg" alt="明信片">
+                    <h6>星球明信片套装</h6>
+                    <p class="price">¥ 299</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="goods-card">
+                    <img src="images/goods-plush.jpg" alt="玩偶">
+                    <h6>小王子毛绒玩偶</h6>
+                    <p class="price">¥ 1299</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="goods-card">
+                    <img src="images/goods-book.jpg" alt="绘本">
+                    <h6>精装手绘绘本</h6>
+                    <p class="price">¥ 688</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ⑩ 页脚版权 -->
+    <footer id="about" class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p><i class="bi bi-stars"></i> Le Petit Prince · 小王子主题网页</p>
+            <p class="mb-2">
+                <a href="#" class="text-white me-3">原著</a>
+                <a href="#" class="text-white me-3">联系我们</a>
+                <a href="#" class="text-white me-3">关于本站</a>
+                <a href="#" class="text-white">服务说明</a>
+            </p>
+            <p class="small mb-0">© 2026 小王子主题页面 · 课程作业演示 </p>
+        </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- JS，只做播放暂停 -->
+    <script>
+    const audio = document.getElementById('audioPlayer');
+    const miniPlayBtn = document.getElementById('miniPlayBtn');
+
+    miniPlayBtn.onclick = function () {
+        if (audio.paused) {
+            audio.play();
+            miniPlayBtn.textContent = '⏸';
+        } else {
+            audio.pause();
+            miniPlayBtn.textContent = '▶';
+        }
+    };
+    //播放完毕自动重置按钮图标
+    audio.onended = function () {
+        miniPlayBtn.textContent = '▶';
+    };
+    </script>
+
+    
+</body>
+</html>
